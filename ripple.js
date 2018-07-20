@@ -8,6 +8,7 @@ class Ripple {
     ripple(elem, dur) {
        if(elem.toString() != "[object NodeList]") {
             elem.onclick = function(e) {
+                elem.style.overflow = "hidden";
                 let rippleElem = document.createElement("div");
                 rippleElem.classList.add("ripple");
 
@@ -26,6 +27,7 @@ class Ripple {
        } else {
             for(let i = 0; i < elem.length; i++) {
                 elem[i].onclick = function(e) {
+                    elem[i].style.overflow = "hidden";
                     let rippleElem = document.createElement("div");
                     rippleElem.classList.add("ripple");
 
